@@ -1,0 +1,31 @@
+.card {
+  width: calc(100% / 3 - 15px);
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.textBox {
+  padding: 10px;
+}
+
+.textBox h2 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.textBox p {
+  margin: 0;
+}
+
+.description {
+  color: var(--maingrey);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
+
 :root {
-  --grey: #e2e2e2;
+  --greyborder: #e2e2e2;
+  --maingrey: #606060;
+  --mainfont: "Inter", sans-serif;
+  --secondfont: "Playfair Display", serif;
+}
+
+* {
+  font-family: var(--mainfont);
+  font-weight: 400;
 }
 
 body {

@@ -1,0 +1,19 @@
+.categoriesProducts {
+  display: flex;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.categories {
+  width: 200px;
+  font-family: var(--secondfont);
+  font-weight: 600;
+}
+
+.products {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
