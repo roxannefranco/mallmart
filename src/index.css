@@ -1,7 +1,9 @@
+:root {
+  --grey: #e2e2e2;
+}
+
 body {
   margin: 0;
   padding: 0;
-}
-:root {
-  --grey: #e2e2e2;
+  padding-top: 60px;
 }
