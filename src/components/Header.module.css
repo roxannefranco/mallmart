@@ -1,7 +1,7 @@
 .header {
   display: flex;
   height: 60px;
-  border-bottom: solid var(--greyborder) 1px;
+  border-bottom: solid var(--greyn20) 1px;
   padding-bottom: 10px;
   justify-content: space-between;
   align-items: center;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Product from "../components/Product";
-import { Link } from "react-router-dom";
+import Categories from "../components/Categories";
 import { apiUrl } from "../configs/api";
 import styles from "./Home.module.css";
 
@@ -25,10 +25,10 @@ function Home() {
   return (
     <Layout>
       <h1>Home</h1>
-      <Link to="/cart">Cart</Link>
-
       <div className={styles.categoriesProducts}>
-        <div className={styles.categories}>menu categories here</div>
+        <div className={styles.categories}>
+          <Categories items={products}></Categories>
+        </div>
         <div className={styles.products}>
           {products.map((product, index) => {
             return <Product key={index} product={product}></Product>;

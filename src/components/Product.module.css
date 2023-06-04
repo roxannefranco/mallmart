@@ -16,16 +16,25 @@
 .textBox h2 {
   font-size: 14px;
   margin: 0;
+  font-weight: 500;
 }
 
 .textBox p {
-  margin: 0;
+  font-size: 14px;
 }
 
 .description {
-  color: var(--maingrey);
-  font-size: 14px;
+  font-family: var(--mainfont);
+  color: var(--greyn50);
+  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
+}
+
+.price {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0;
 }

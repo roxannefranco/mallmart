@@ -8,7 +8,7 @@ function Product(props) {
       <div className={styles.textBox}>
         <h2>{product.title}</h2>
         <p className={styles.description}>{product.description}</p>
-        <p>{product.price} kr</p>
+        <p className={styles.price}>{product.price} kr</p>
       </div>
     </div>
   );

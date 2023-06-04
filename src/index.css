@@ -2,8 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
 
 :root {
-  --greyborder: #e2e2e2;
-  --maingrey: #606060;
+  --greyn20: #e2e2e2;
+  --greyn40: #9d9d9d;
+  --greyn50: #606060;
+  --greyn60: #333333;
+  --discount: #ed3030;
   --mainfont: "Inter", sans-serif;
   --secondfont: "Playfair Display", serif;
 }
