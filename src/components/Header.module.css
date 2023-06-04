@@ -1,16 +1,21 @@
 .header {
-  display: flex;
-  height: 60px;
   border-bottom: solid var(--greyn20) 1px;
-  padding-bottom: 10px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: white;
+  z-index: 100;
+}
+
+.headerWrapper {
+  max-width: 1045px;
+  margin: 0 auto;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
 }
 
 .header p {

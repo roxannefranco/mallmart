@@ -1,0 +1,25 @@
+.searchInput {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.searchInput input {
+  border: solid 1px var(--greyn20);
+  border-radius: 5px;
+  height: 20px;
+  width: 480px;
+  font-family: var(--mainfont);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+  padding-left: 40px;
+  color: var(--greyn40);
+}
+
+.searchInput svg {
+  position: absolute;
+  left: 10px;
+  pointer-events: none;
+}

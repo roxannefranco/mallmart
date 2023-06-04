@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Product from "../components/Product";
-import Categories from "../components/Categories";
+import SearchBox from "../components/SearchBox";
 import { apiUrl } from "../configs/api";
 import styles from "./Home.module.css";
 
@@ -24,11 +24,8 @@ function Home() {
 
   return (
     <Layout>
-      <h1>Home</h1>
-      <div className={styles.categoriesProducts}>
-        <div className={styles.categories}>
-          <Categories items={products}></Categories>
-        </div>
+      <div className="center-content">
+        <SearchBox></SearchBox>
         <div className={styles.products}>
           {products.map((product, index) => {
             return <Product key={index} product={product}></Product>;
