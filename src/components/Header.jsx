@@ -2,6 +2,7 @@ import styles from "./Header.module.css";
 import Icon from "./Icon";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import SearchBox from "./SearchBox";
 
 function Header() {
   return (
@@ -10,9 +11,12 @@ function Header() {
         <Link to="/">
           <Logo></Logo>
         </Link>
-        <Link to="/cart">
-          <Icon name="cart"></Icon>
-        </Link>
+        <div className={styles.searchCart}>
+          <SearchBox></SearchBox>
+          <Link to="/cart">
+            <Icon name="cart"></Icon>
+          </Link>
+        </div>
       </div>
     </header>
   );

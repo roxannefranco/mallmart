@@ -18,6 +18,12 @@
   width: calc(100% - 40px);
 }
 
+.searchCart {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .header p {
   padding: 0;
   margin: 0;
