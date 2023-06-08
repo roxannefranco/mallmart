@@ -17,7 +17,7 @@ const routerConfig = createBrowserRouter([
     element: <Cart />,
   },
   {
-    path: "/product",
+    path: "/product/:id",
     element: <Single />,
   },
 ]);
