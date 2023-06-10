@@ -23,7 +23,7 @@
   font-size: 14px;
   margin: 0;
   font-weight: 500;
-  color: black;
+  color: var(--greyn70);
 }
 
 .textBox p {
@@ -51,7 +51,7 @@
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 0;
-  color: black;
+  color: var(--greyn70);
 }
 
 @media (max-width: 980px) {

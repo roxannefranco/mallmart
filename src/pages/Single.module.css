@@ -1,1 +1,41 @@
+.container {
+  display: flex;
+  max-width: 1045px;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+}
 
+.singleImage {
+  height: 530px;
+  width: 520px;
+  object-fit: cover;
+}
+
+.title {
+  font-family: var(--mainfont);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--greyn70);
+}
+
+.description {
+  font-family: var(--mainfont);
+  font-size: 14px;
+  font-color: var(--greyn50);
+  font-weight: 400;
+}
+
+.price {
+  font-family: var(--mainfont);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--greyn70);
+}
+
+.buttonMain {
+  background-color: var(--greyn60);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}

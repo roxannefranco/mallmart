@@ -23,7 +23,19 @@ function Single() {
 
   return (
     <Layout>
-      <h1>{product.title}</h1>
+      <div className={styles.container}>
+        <img
+          src={product.imageUrl}
+          alt="{product.title}"
+          className={styles.singleImage}
+        />
+        <div>
+          <h1 className={styles.title}>{product.title}</h1>
+          <span className={styles.description}>{product.description}</span>
+          <p className={styles.price}>{product.price} kr</p>
+          <button className={styles.buttonMain}>Add to Cart</button>
+        </div>
+      </div>
     </Layout>
   );
 }

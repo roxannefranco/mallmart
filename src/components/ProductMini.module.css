@@ -19,7 +19,7 @@
 
 .textBox h2 {
   font-family: var(--mainfont);
-  color: black;
+  color: var(--greyn70);
   font-weight: 500;
   font-size: 14px;
   margin: 0;

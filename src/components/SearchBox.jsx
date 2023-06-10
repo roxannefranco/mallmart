@@ -6,7 +6,8 @@ import ProductMini from "./ProductMini";
 
 function SearchBox() {
   const [products, setProducts] = useState([]);
-  const [isOpen, setOpen] = useState([]);
+  const [isOpen, setOpen] = useState(false);
+  const [term, setTerm] = useState("");
 
   // runs everytime dependencies change
   useEffect(() => {
@@ -19,21 +20,50 @@ function SearchBox() {
     getProducts();
     // since array of dependencies is empty it runs only once
   }, []);
+
+  useEffect(() => {
+    if (term.length) {
+      setOpen(true);
+    } else {
+      setOpen(false);
+    }
+  }, [term]);
+
   return (
     <div className={styles.searchContainer}>
       <div className={styles.searchInput}>
         <Icon name="search"></Icon>
-        <input placeholder="Start typing to search..." />
+        {/* changes state when input value changes */}
+        <input
+          placeholder="Start typing to search..."
+          value={term}
+          onChange={(e) => setTerm(e.target.value)}
+        />
       </div>
-      <div className={styles.dropDown}>
-        <ul>
-          <li>
-            {products.map((product, index) => {
-              return <ProductMini key={index} product={product}></ProductMini>;
-            })}
-          </li>
-        </ul>
-      </div>
+      {/** if open display */}
+      {isOpen ? (
+        <div className={styles.dropDown}>
+          <ul>
+            <li>
+              {products
+                .filter((product) => {
+                  return (
+                    product.title.toLowerCase().includes(term.toLowerCase()) ||
+                    product.description
+                      .toLowerCase()
+                      .includes(term.toLowerCase())
+                  );
+                })
+                .map((product, index) => {
+                  return (
+                    <ProductMini key={index} product={product}></ProductMini>
+                  );
+                })}
+            </li>
+          </ul>
+        </div>
+      ) : null}
+      {/* same as else */}
     </div>
   );
 }
