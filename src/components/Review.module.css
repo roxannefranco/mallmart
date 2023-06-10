@@ -1,0 +1,23 @@
+.reviewContainer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px var(--greyn20);
+}
+
+.clientReview {
+  display: flex;
+  align-items: center;
+}
+
+.clientReview span {
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+p {
+  margin: 0;
+  padding-top: 5px;
+  color: var(--greyn50);
+  font-size: var(--mainfont);
+  font-weight: 400;
+}

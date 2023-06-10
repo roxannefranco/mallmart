@@ -3,6 +3,10 @@
   max-width: 1045px;
   margin: 0 auto;
   width: calc(100% - 40px);
+  gap: 30px;
+}
+
+.details {
 }
 
 .singleImage {
@@ -30,12 +34,46 @@
   font-size: 24px;
   font-weight: 600;
   color: var(--greyn70);
+  border-top: solid 1px var(--greyn20);
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .buttonMain {
   background-color: var(--greyn60);
   border: none;
+  border-radius: 5px;
   color: white;
   padding: 10px;
   cursor: pointer;
+  height: 50px;
+  width: 490px;
+  margin-top: 20px;
+  transition: background-color 200ms linear;
+}
+
+.buttonMain:hover {
+  background-color: var(--greyn50);
+}
+
+.reviews {
+  display: flex;
+  color: var(--greyn70);
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 500;
+  border-top: solid 1px var(--greyn20);
+  border-bottom: solid 1px var(--greyn20);
+  padding-top: 30px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  gap: 10px;
+  align-items: center;
+}
+
+.rating {
+  font-family: var(--mainfont);
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--greyn70);
 }
