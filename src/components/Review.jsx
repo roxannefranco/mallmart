@@ -2,14 +2,15 @@ import styles from "./Review.module.css";
 import Icon from "./Icon";
 import Stars from "./Stars";
 
-function Review(props) {
+// Extract "review" from the props argument
+function Review({ review }) {
   return (
     <div className={styles.reviewContainer}>
       <div className={styles.clientReview}>
-        <span>{props.review.username}</span>
-        <Stars></Stars>
+        <span>{review.username}</span>
+        <Stars rating={review.rating}></Stars>
       </div>
-      <p>{props.review.description}</p>
+      <p>{review.description}</p>
     </div>
   );
 }

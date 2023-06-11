@@ -56,7 +56,11 @@ function SearchBox() {
                 })
                 .map((product, index) => {
                   return (
-                    <ProductMini key={index} product={product}></ProductMini>
+                    <ProductMini
+                      key={index}
+                      product={product}
+                      resetBox={() => setTerm("")}
+                    ></ProductMini>
                   );
                 })}
             </li>

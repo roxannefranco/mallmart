@@ -1,4 +1,31 @@
 .stars {
+  position: relative;
+}
+
+.bgStars,
+.frontStars {
   display: flex;
   gap: 4px;
+}
+
+.frontStars {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bgStars svg path {
+  fill: var(--greyn20);
+}
+
+.frontStars svg path {
+  fill: var(--greyn50);
+}
+
+.avg .bgStars svg path {
+  fill: var(--greyn40);
+}
+
+.avg .frontStars svg path {
+  fill: #fca50a;
 }

@@ -29,5 +29,9 @@
   margin: 0;
 }
 
-.header svg {
+@media (max-width: 610px) {
+  .headerWrapper > a svg {
+    height: 20px;
+    width: 82px;
+  }
 }

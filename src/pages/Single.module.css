@@ -10,9 +10,9 @@
 }
 
 .singleImage {
-  height: 530px;
-  width: 520px;
+  width: 100%;
   object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .title {
@@ -76,4 +76,11 @@
   font-size: 44px;
   font-weight: 600;
   color: var(--greyn70);
+}
+
+@media (max-width: 850px) {
+  .container {
+    display: block;
+    max-width: 500px;
+  }
 }

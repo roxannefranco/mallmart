@@ -21,17 +21,19 @@ function Single() {
 
     getProduct();
     // since array of dependencies is empty it runs once
-  }, []);
+  }, [id]);
 
   return (
     <Layout>
       {product != null ? (
         <div className={styles.container}>
-          <img
-            src={product.imageUrl}
-            alt="{product.title}"
-            className={styles.singleImage}
-          />
+          <div>
+            <img
+              src={product.imageUrl}
+              alt="{product.title}"
+              className={styles.singleImage}
+            />
+          </div>
           <div className="{styles.details}">
             <h1 className={styles.title}>{product.title}</h1>
             <span className={styles.description}>{product.description}</span>
@@ -40,7 +42,7 @@ function Single() {
             <div className={styles.reviews}>
               <div className={styles.rating}>{product.rating}</div>
               <div>
-                <Stars rating={product.rating}></Stars>
+                <Stars rating={product.rating} avg={true}></Stars>
                 <div>{product.reviews.length} reviews</div>
               </div>
             </div>

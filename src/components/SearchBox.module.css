@@ -12,7 +12,7 @@
   border: solid 1px var(--greyn20);
   border-radius: 5px;
   height: 38px;
-  width: 420px;
+  width: 370px;
   font-family: var(--mainfont);
   font-size: 14px;
   font-weight: 400;
@@ -46,4 +46,33 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 610px) {
+  .searchInput input {
+    width: 230px;
+  }
+  .dropDown {
+    width: 350px;
+    right: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .searchInput input {
+    width: 180px;
+    padding-left: 26px;
+    font-size: 12px;
+  }
+
+  .searchInput svg {
+    width: 16px;
+  }
+  .dropDown {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 48px;
+    position: fixed;
+  }
 }
