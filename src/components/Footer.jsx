@@ -4,8 +4,10 @@ import Logo from "./Logo";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Logo></Logo>
-      <span>All rights reserved @ 2023</span>
+      <div className={styles.footerContainer}>
+        <Logo></Logo>
+        <span>All rights reserved @ 2023</span>
+      </div>
     </footer>
   );
 }

@@ -26,6 +26,8 @@ body {
 main {
   padding-top: 60px;
   padding-bottom: 60px;
+  min-height: calc(100vh - 92px);
+  box-sizing: border-box;
 }
 
 .center-content {

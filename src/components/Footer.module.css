@@ -1,16 +1,23 @@
 .footer {
-  display: flex;
-  height: 30px;
-  border-top: solid var(--greyn20) 1px;
-  padding-bottom: 10px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  border-top: 1px solid var(--greyn20);
   background-color: white;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1045px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding-bottom: 10px;
+  height: 30px;
+  padding: 0 20px;
 }
 
 .footer svg {
   height: 20px;
+  width: 82px;
 }
 .footer svg path {
   fill: var(--greyn50);
