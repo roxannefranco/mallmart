@@ -6,7 +6,9 @@
   gap: 30px;
 }
 
-.details {
+.details,
+.image {
+  flex: 1;
 }
 
 .singleImage {

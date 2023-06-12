@@ -11,7 +11,7 @@ function ProductMini(props) {
       onClick={resetBox}
       className={styles.cardMini}
     >
-      <img src={product.imageUrl} alt="product image" />
+      <img src={product.imageUrl} alt="{product.title}" />
       <div className={styles.textBox}>
         <h2>{product.title}</h2>
         <div className={styles.description}>

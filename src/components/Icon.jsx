@@ -83,6 +83,49 @@ function Icon(props) {
         />
       </svg>
     );
+  } else if (props.name == "check") {
+    return (
+      <svg
+        width="173"
+        height="172"
+        viewBox="0 0 173 172"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="173" height="172" fill="white" />
+        <path
+          d="M158.583 79.4066V85.9999C158.574 101.454 153.541 116.492 144.234 128.87C134.927 141.248 121.844 150.303 106.938 154.685C92.0319 159.066 76.1002 158.54 61.5193 153.184C46.9383 147.829 34.4893 137.93 26.029 124.966C17.5686 112.001 13.5501 96.6644 14.5729 81.2435C15.5956 65.8226 21.6048 51.1436 31.7042 39.3956C41.8036 27.6476 55.4521 19.4602 70.6142 16.0543C85.7762 12.6484 101.639 14.2067 115.838 20.4966"
+          stroke="#3EA56D"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M158.583 28.6667L86.5 100.405L64.875 78.9051"
+          stroke="#3EA56D"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  } else if (props.name == "trash") {
+    return (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 7L18.133 19.142C18.0971 19.6466 17.8713 20.1188 17.5011 20.4636C17.1309 20.8083 16.6439 21 16.138 21H7.862C7.35614 21 6.86907 20.8083 6.49889 20.4636C6.1287 20.1188 5.90292 19.6466 5.867 19.142L5 7M10 11V17M14 11V17M15 7V4C15 3.73478 14.8946 3.48043 14.7071 3.29289C14.5196 3.10536 14.2652 3 14 3H10C9.73478 3 9.48043 3.10536 9.29289 3.29289C9.10536 3.48043 9 3.73478 9 4V7M4 7H20"
+          stroke="black"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
   }
 
   return null;

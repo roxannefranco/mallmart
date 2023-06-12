@@ -27,14 +27,14 @@ function Single() {
     <Layout>
       {product != null ? (
         <div className={styles.container}>
-          <div>
+          <div className={styles.image}>
             <img
               src={product.imageUrl}
               alt="{product.title}"
               className={styles.singleImage}
             />
           </div>
-          <div className="{styles.details}">
+          <div className={styles.details}>
             <h1 className={styles.title}>{product.title}</h1>
             <span className={styles.description}>{product.description}</span>
             <p className={styles.price}>{product.price} kr</p>
