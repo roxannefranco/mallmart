@@ -2,6 +2,7 @@ import styles from "./Cart.module.css";
 import Layout from "../components/Layout";
 import Logo from "../components/Logo";
 import Icon from "../components/Icon";
+import { Link } from "react-router-dom";
 
 function Cart() {
   return (
@@ -54,8 +55,12 @@ function Cart() {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button className={styles.firstButton}>Checkout</button>
-          <button className={styles.secondButton}>Keep shopping</button>
+          <Link to="/checkout" className={styles.firstButton}>
+            Proceed to checkout
+          </Link>
+          <Link to="/" className={styles.secondButton}>
+            Keep shopping
+          </Link>
         </div>
       </div>
     </Layout>

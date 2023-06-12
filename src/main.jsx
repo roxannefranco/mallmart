@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Single from "./pages/Single";
+import Checkout from "./pages/Checkout";
 
 // configure the routes
 const routerConfig = createBrowserRouter([
@@ -19,6 +20,10 @@ const routerConfig = createBrowserRouter([
   {
     path: "/product/:id",
     element: <Single />,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />,
   },
 ]);
 

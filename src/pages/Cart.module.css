@@ -110,11 +110,13 @@ h2 {
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
-  height: 50px;
   width: 100%;
   transition: background-color 200ms linear;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .firstButton:hover {
@@ -127,11 +129,13 @@ h2 {
   border: 2px solid var(--greyn60);
   border-radius: 5px;
   color: var(--greyn70);
-  padding: 10px;
+  padding: 13px;
   cursor: pointer;
-  height: 50px;
   width: 100%;
   transition: background-color 200ms linear;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .secondButton:hover {
