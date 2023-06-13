@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Product from "../components/Product";
+import Loader from "../components/Loader";
 import { apiUrl } from "../configs/api";
 import styles from "./Home.module.css";
 
@@ -27,13 +28,17 @@ function Home() {
 
   return (
     <Layout>
-      <div className="center-content">
-        <div className={styles.products}>
-          {products.map((product, index) => {
-            return <Product key={index} product={product}></Product>;
-          })}
+      {products.length ? (
+        <div className="center-content">
+          <div className={styles.products}>
+            {products.map((product, index) => {
+              return <Product key={index} product={product}></Product>;
+            })}
+          </div>
         </div>
-      </div>
+      ) : (
+        <Loader />
+      )}
     </Layout>
   );
 }

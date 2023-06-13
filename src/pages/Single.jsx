@@ -2,6 +2,7 @@ import styles from "./Single.module.css";
 import Layout from "../components/Layout";
 import Stars from "../components/Stars";
 import Review from "../components/Review";
+import Loader from "../components/Loader";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { apiUrl } from "../configs/api";
@@ -83,7 +84,7 @@ function Single() {
           </div>
         </div>
       ) : (
-        <div>loading...</div>
+        <Loader />
       )}
     </Layout>
   );
