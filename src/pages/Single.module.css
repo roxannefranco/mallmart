@@ -31,14 +31,41 @@
   font-weight: 400;
 }
 
+.priceContainer {
+  border-top: solid 1px var(--greyn20);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
 .price {
   font-family: var(--mainfont);
   font-size: 24px;
   font-weight: 600;
   color: var(--greyn70);
-  border-top: solid 1px var(--greyn20);
-  padding-top: 20px;
-  margin-top: 20px;
+}
+
+.discountedPrice {
+  color: var(--discount);
+  display: flex;
+  align-items: center;
+}
+
+.discountedPrice .old {
+  margin-left: 15px;
+  color: var(--greyn60);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.percentage {
+  background-color: var(--discount);
+  color: white;
+  padding: 4px 8px;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
 .buttonMain {

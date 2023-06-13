@@ -9,6 +9,8 @@ import { apiUrl } from "../configs/api";
 function Single() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [percentage, setPercentage] = useState(0);
+  const [hasDiscount, setDiscount] = useState(false);
 
   // fetch single product
   useEffect(() => {
@@ -26,6 +28,16 @@ function Single() {
   useEffect(() => {
     if (product != null) {
       document.title = `Mallmart - ${product.title}`;
+
+      // checks if prices are diferent and if so means it has discount
+      const d = product.price != product.discountedPrice;
+      // percentage calculation
+      const p = Math.round(
+        ((product.price - product.discountedPrice) * 100) / product.price
+      );
+
+      setPercentage(p);
+      setDiscount(d);
     }
   }, [product]);
 
@@ -43,7 +55,19 @@ function Single() {
           <div className={styles.details}>
             <h1 className={styles.title}>{product.title}</h1>
             <span className={styles.description}>{product.description}</span>
-            <p className={styles.price}>{product.price} kr</p>
+
+            <div className={styles.priceContainer}>
+              {hasDiscount ? (
+                <div className={`${styles.price} ${styles.discountedPrice}`}>
+                  {product.discountedPrice} kr
+                  <span className={styles.percentage}>-{percentage}%</span>
+                  <span className={styles.old}>{product.price} kr</span>
+                </div>
+              ) : (
+                <p className={styles.price}>{product.price} kr</p>
+              )}
+            </div>
+
             <button className={styles.buttonMain}>Add to cart</button>
             <div className={styles.reviews}>
               <div className={styles.rating}>{product.rating}</div>
