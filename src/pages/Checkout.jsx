@@ -49,7 +49,7 @@ function Checkout() {
             <div className={styles.grandTotal}>1600 kr</div>
           </div>
         </div>
-        <Link to="/checkout" className={styles.firstButton}>
+        <Link to="/success" className={styles.firstButton}>
           Confirm and pay
         </Link>
       </div>

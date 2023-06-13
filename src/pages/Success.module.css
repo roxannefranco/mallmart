@@ -1,0 +1,41 @@
+.successWrapper {
+  max-width: 550px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.successWrapper svg {
+  display: inline-block;
+}
+
+.title {
+  font-family: var(--secondfont);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.firstButton {
+  margin-top: 50px;
+  background-color: var(--greyn60);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 200ms linear;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.firstButton:hover {
+  background-color: var(--greyn50);
+}
+
+.order {
+  font-size: 14px;
+  line-height: 24px;
+}

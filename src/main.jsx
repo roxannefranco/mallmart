@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Single from "./pages/Single";
 import Checkout from "./pages/Checkout";
+import Success from "./pages/Success";
 
 // configure the routes
 const routerConfig = createBrowserRouter([
@@ -24,6 +25,10 @@ const routerConfig = createBrowserRouter([
   {
     path: "/checkout",
     element: <Checkout />,
+  },
+  {
+    path: "/success",
+    element: <Success />,
   },
 ]);
 
