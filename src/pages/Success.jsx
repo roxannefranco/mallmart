@@ -1,9 +1,15 @@
 import styles from "./Success.module.css";
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import Icon from "../components/Icon";
 import { Link } from "react-router-dom";
 
 function Success() {
+  // Change title
+  useEffect(() => {
+    document.title = "Mallmart - Success";
+  }, []);
+
   return (
     <Layout>
       <div className={styles.successWrapper}>

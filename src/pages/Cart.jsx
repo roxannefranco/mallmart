@@ -1,10 +1,16 @@
 import styles from "./Cart.module.css";
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import Logo from "../components/Logo";
 import Icon from "../components/Icon";
 import { Link } from "react-router-dom";
 
 function Cart() {
+  // Change title
+  useEffect(() => {
+    document.title = "Mallmart - My Cart";
+  }, []);
+
   return (
     <Layout>
       <div className={styles.cartWrapper}>

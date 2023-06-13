@@ -1,9 +1,15 @@
 import styles from "./Checkout.module.css";
+import { useEffect } from "react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 
 function Checkout() {
+  // Change title
+  useEffect(() => {
+    document.title = "Mallmart - Checkout";
+  }, []);
+
   return (
     <Layout>
       <div className={styles.checkoutWrapper}>

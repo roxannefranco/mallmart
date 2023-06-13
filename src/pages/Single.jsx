@@ -23,6 +23,12 @@ function Single() {
     // since array of dependencies is empty it runs once
   }, [id]);
 
+  useEffect(() => {
+    if (product != null) {
+      document.title = `Mallmart - ${product.title}`;
+    }
+  }, [product]);
+
   return (
     <Layout>
       {product != null ? (

@@ -9,6 +9,9 @@ function Home() {
 
   // fetch products once
   useEffect(() => {
+    // Change title
+    document.title = "Mallmart";
+
     // first create async function
     const getProducts = async () => {
       const response = await fetch(apiUrl);
