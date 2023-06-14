@@ -7,6 +7,8 @@ import Cart from "./pages/Cart";
 import Single from "./pages/Single";
 import Checkout from "./pages/Checkout";
 import Success from "./pages/Success";
+import Contacts from "./pages/Contacts";
+import ContactSuccess from "./pages/ContactSuccess";
 
 // configure the routes
 const routerConfig = createBrowserRouter([
@@ -29,6 +31,14 @@ const routerConfig = createBrowserRouter([
   {
     path: "/success",
     element: <Success />,
+  },
+  {
+    path: "/contacts",
+    element: <Contacts />,
+  },
+  {
+    path: "/contact-success",
+    element: <ContactSuccess />,
   },
 ]);
 

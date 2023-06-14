@@ -1,0 +1,78 @@
+.checkoutWrapper {
+  max-width: 550px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.headTitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.headTitle svg {
+  display: inline-block;
+}
+
+.title {
+  font-family: var(--secondfont);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.contactDetails {
+  font-family: var(--mainfont);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--greyn50);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.formInfo {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border: 1px solid var(--greyn20);
+  border-radius: 5px;
+  color: var(--greyn70);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.textField {
+  resize: none;
+  appearance: none;
+  height: 150px;
+}
+
+.firstButton {
+  margin-top: 20px;
+  background-color: var(--greyn60);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 200ms linear;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.firstButton:hover {
+  background-color: var(--greyn50);
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 600;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #cc0000;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid #cc0000;
+}

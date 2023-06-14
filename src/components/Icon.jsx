@@ -126,6 +126,29 @@ function Icon(props) {
         />
       </svg>
     );
+  } else if (props.name == "message") {
+    return (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4.15771 4.02869H20.1577C21.2577 4.02869 22.1577 4.92869 22.1577 6.02869V18.0287C22.1577 19.1287 21.2577 20.0287 20.1577 20.0287H4.15771C3.05771 20.0287 2.15771 19.1287 2.15771 18.0287V6.02869C2.15771 4.92869 3.05771 4.02869 4.15771 4.02869Z"
+          stroke="white"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M22.1577 6.02869L12.1577 13.0287L2.15771 6.02869"
+          stroke="white"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
   }
 
   return null;
