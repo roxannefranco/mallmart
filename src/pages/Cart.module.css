@@ -24,6 +24,7 @@
   padding: 20px 0;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .cartItems:last-child {
@@ -36,7 +37,7 @@
   object-fit: cover;
 }
 
-h2 {
+.details h2 {
   font-size: 14px;
 }
 
@@ -198,5 +199,38 @@ h2 {
   .cartItems img {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .details h2 {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .cartItems {
+    padding: 10px 0;
+  }
+
+  .cartItems img {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+  }
+
+  .trash svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .quantity {
+    font-size: 12px;
+  }
+
+  .priceDelete {
+    gap: 4px;
   }
 }

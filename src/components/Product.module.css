@@ -27,6 +27,7 @@
 
 .percentage {
   position: absolute;
+  font-size: 14px;
   top: 30px;
   left: 0;
   background-color: var(--discount);

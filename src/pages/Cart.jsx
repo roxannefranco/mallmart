@@ -6,6 +6,7 @@ import Icon from "../components/Icon";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
 import { cartAtom } from "../cart/atoms";
+import ContactUs from "../components/ContactUs";
 
 function Cart() {
   // global state
@@ -124,12 +125,13 @@ function Cart() {
         ) : (
           <div>
             <div className={styles.empty}>Your cart is empty.</div>
-            <Link to="/" className={styles.firstButton}>
-              Go to Shop
+            <Link to="/" className={styles.secondButton}>
+              Keep shopping
             </Link>
           </div>
         )}
       </div>
+      <ContactUs></ContactUs>
     </Layout>
   );
 }

@@ -5,6 +5,7 @@ import Icon from "../components/Icon";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
 import { cartAtom } from "../cart/atoms";
+import ContactUs from "../components/ContactUs";
 
 function Success() {
   // global state
@@ -29,6 +30,7 @@ function Success() {
           Back to shop
         </Link>
       </div>
+      <ContactUs></ContactUs>
     </Layout>
   );
 }

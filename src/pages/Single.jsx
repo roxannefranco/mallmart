@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { apiUrl } from "../configs/api";
 import { useAtom } from "jotai";
 import { cartAtom } from "../cart/atoms";
+import ContactUs from "../components/ContactUs";
 
 function Single() {
   const { id } = useParams();
@@ -121,6 +122,7 @@ function Single() {
       ) : (
         <Loader />
       )}
+      <ContactUs></ContactUs>
     </Layout>
   );
 }
