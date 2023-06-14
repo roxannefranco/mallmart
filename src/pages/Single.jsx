@@ -6,9 +6,16 @@ import Loader from "../components/Loader";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { apiUrl } from "../configs/api";
+import { useAtom } from "jotai";
+import { cartAtom } from "../cart/atoms";
 
 function Single() {
   const { id } = useParams();
+
+  // global state
+  const [cart, setCart] = useAtom(cartAtom);
+
+  // local state
   const [product, setProduct] = useState(null);
   const [percentage, setPercentage] = useState(0);
   const [hasDiscount, setDiscount] = useState(false);
@@ -42,6 +49,32 @@ function Single() {
     }
   }, [product]);
 
+  const addToCart = () => {
+    // check if product is already in cart
+    const inCart = cart.find((p) => {
+      return p.id == product.id;
+    });
+
+    // if not in cart
+    if (!inCart) {
+      const currentProduct = product;
+      currentProduct.quantity = 1;
+      setCart([...cart, currentProduct]);
+    }
+    // if in cart
+    else {
+      const cartClone = cart.slice();
+      const cartProductIndex = cartClone.findIndex((p) => {
+        return p.id == product.id;
+      });
+
+      // Add one more to quantity
+      inCart.quantity++;
+      cartClone[cartProductIndex] = inCart;
+      setCart(cartClone);
+    }
+  };
+
   return (
     <Layout>
       {product != null ? (
@@ -49,7 +82,7 @@ function Single() {
           <div className={styles.image}>
             <img
               src={product.imageUrl}
-              alt="{product.title}"
+              alt={product.title}
               className={styles.singleImage}
             />
           </div>
@@ -69,7 +102,9 @@ function Single() {
               )}
             </div>
 
-            <button className={styles.buttonMain}>Add to cart</button>
+            <button className={styles.buttonMain} onClick={addToCart}>
+              Add to cart
+            </button>
             <div className={styles.reviews}>
               <div className={styles.rating}>{product.rating}</div>
               <div>

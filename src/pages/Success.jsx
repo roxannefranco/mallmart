@@ -3,11 +3,17 @@ import { useEffect } from "react";
 import Layout from "../components/Layout";
 import Icon from "../components/Icon";
 import { Link } from "react-router-dom";
+import { useAtom } from "jotai";
+import { cartAtom } from "../cart/atoms";
 
 function Success() {
+  // global state
+  const [cart, setCart] = useAtom(cartAtom);
+
   // Change title
   useEffect(() => {
     document.title = "Mallmart - Success";
+    setCart([]);
   }, []);
 
   return (

@@ -151,6 +151,49 @@ h2 {
   margin-top: 50px;
 }
 
+.trash {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 200ms linear;
+}
+
+.trash:hover {
+  opacity: 0.5;
+}
+
+.quantity {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--n60);
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--greyn60);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.discountedPrice {
+  color: var(--discount);
+}
+
+.discountedPrice span {
+  font-size: 12px;
+  color: var(--greyn40);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.empty {
+  text-align: center;
+  font-family: var(--mainfont);
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 450px) {
   .cartItems img {
     width: 50px;

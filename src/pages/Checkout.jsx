@@ -3,8 +3,13 @@ import { useEffect } from "react";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import { useAtom } from "jotai";
+import { cartAtom } from "../cart/atoms";
 
 function Checkout() {
+  // global state
+  const [cart, setCart] = useAtom(cartAtom);
+
   // Change title
   useEffect(() => {
     document.title = "Mallmart - Checkout";
@@ -51,8 +56,35 @@ function Checkout() {
           </div>
           <div className={styles.totalValues}>
             <div className={styles.shipping}>FREE</div>
-            <div className={styles.discount}>-80 kr</div>
-            <div className={styles.grandTotal}>1600 kr</div>
+            <div className={styles.discount}>
+              -
+              {cart
+                .reduce((totalDiscount, product) => {
+                  if (product.discountedPrice != product.price) {
+                    // has discount
+                    return (
+                      totalDiscount +
+                      product.quantity *
+                        (product.price - product.discountedPrice)
+                    );
+                  } else {
+                    // no discout
+                    return totalDiscount;
+                  }
+                }, 0)
+                .toFixed(2)}{" "}
+              kr
+            </div>
+            <div className={styles.grandTotal}>
+              {cart
+                .reduce((totalPrice, product) => {
+                  return (
+                    totalPrice + product.quantity * product.discountedPrice
+                  );
+                }, 0)
+                .toFixed(2)}{" "}
+              kr
+            </div>
           </div>
         </div>
         <Link to="/success" className={styles.firstButton}>
