@@ -27,7 +27,7 @@
 .description {
   font-family: var(--mainfont);
   font-size: 14px;
-  font-color: var(--greyn50);
+  color: var(--greyn50);
   font-weight: 400;
 }
 

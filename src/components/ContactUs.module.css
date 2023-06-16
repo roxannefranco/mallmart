@@ -11,18 +11,17 @@
 .contactButton {
   display: flex;
   position: fixed;
-  bottom: 30px;
-  right: 0;
+  bottom: 50px;
+  right: 40px;
   background-color: var(--greyn70);
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-family: var(--mainfont);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
   border-radius: 10px;
   cursor: pointer;
   align-items: center;
-  margin: 20px 50px;
   z-index: 999;
   text-transform: uppercase;
 }
@@ -31,4 +30,10 @@
   display: inline-block;
   max-width: 100%;
   padding-right: 5px;
+}
+
+@media (max-width: 350px) {
+  .contactButton {
+    right: 20px;
+  }
 }
