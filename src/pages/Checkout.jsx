@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { useAtom } from "jotai";
 import { cartAtom } from "../cart/atoms";
-import ContactUs from "../components/ContactUs";
 
 function Checkout() {
   // global state
@@ -92,7 +91,6 @@ function Checkout() {
           Confirm and pay
         </Link>
       </div>
-      <ContactUs></ContactUs>
     </Layout>
   );
 }

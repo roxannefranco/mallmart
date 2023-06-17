@@ -4,7 +4,6 @@ import Product from "../components/Product";
 import Loader from "../components/Loader";
 import { apiUrl } from "../configs/api";
 import styles from "./Home.module.css";
-import ContactUs from "../components/ContactUs";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -39,8 +38,7 @@ function Home() {
         </div>
       ) : (
         <Loader />
-      )}
-      <ContactUs></ContactUs>
+      )}{" "}
     </Layout>
   );
 }

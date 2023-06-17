@@ -12,7 +12,7 @@ import Layout from "../components/Layout";
 const schema = yup
   .object({
     name: yup.string().min(3, "Name must be at least 3 characters.").required(),
-    email: yup.string().email().required("Email is required."),
+    email: yup.string().email().required("A valid email is required."),
     subject: yup
       .string()
       .min(3, "Subject must be at least 3 characters.")
@@ -55,11 +55,7 @@ function Contacts() {
         </div>
         <div className={styles.contactDetails}>Name</div>
         <div>
-          <input
-            {...register("name")}
-            className={styles.formInfo}
-            placeholder="Roxanne Franco"
-          />
+          <input {...register("name")} className={styles.formInfo} />
           {errors.name != null ? (
             <p className={styles.error}>{errors.name?.message}</p>
           ) : null}
@@ -70,7 +66,7 @@ function Contacts() {
             {...register("email")}
             type="email"
             className={styles.formInfo}
-            placeholder="roxanne@franco.com"
+            placeholder="ex: your@email.com"
           />
           {errors.email != null ? (
             <p className={styles.error}>{errors.email?.message}</p>
