@@ -130,7 +130,6 @@ function Cart() {
           </div>
         )}
       </div>
-      s
     </Layout>
   );
 }
