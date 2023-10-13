@@ -1,6 +1,7 @@
 # Mallmart - eCom store
 
-<img width="1658" alt="image" src="https://github.com/roxannefranco/mallmart/assets/50967213/36eb0845-47da-4890-b443-c5e37af246bd">
+<img width="1050" alt="image" src="https://github.com/roxannefranco/mallmart/assets/50967213/928fc36a-30c7-4969-9dff-5e6040e13616">
+
 
 <img width="1657" alt="image" src="https://github.com/roxannefranco/mallmart/assets/50967213/77d33ec5-1791-4699-bacc-50569f878d67">
 
